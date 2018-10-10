@@ -1,11 +1,14 @@
 import React from 'react'
 import HogCard from './HogCard'
 
-function HogList ({hogs}) {
-  const hogComponents = hogs.map((hog) => {
-    return <HogCard key={hog.name} {...hog} />
-  })
-  return(<div className='ui grid container'>{hogComponents}</div>)
+function Hoglist(props) {
+  console.log(props)
+  const hogComponents = props.hogs.map(hog => <HogCard key={hog.name} {...hog} />)
+  return (
+    <div className="ui grid container">
+      { hogComponents }
+    </div>
+  )
 }
 
-export default HogList
+export default Hoglist
