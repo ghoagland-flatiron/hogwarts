@@ -5,9 +5,10 @@ import hogs from '../porkers_data';
 
 class App extends Component {
   render() {
+    console.log(hogs);
     return (
       <div className="App">
-          < Nav />
+        <Nav />
 
       </div>
     )
