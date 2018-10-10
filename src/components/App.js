@@ -1,15 +1,15 @@
 import React, { Component } from 'react';
 import '../App.css';
 import Nav from './Nav'
+import HogList from './HogList'
 import hogs from '../porkers_data';
 
 class App extends Component {
   render() {
-    console.log(hogs);
     return (
       <div className="App">
         <Nav />
-        
+        <HogList hogs={hogs} />
       </div>
     )
   }

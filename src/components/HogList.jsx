@@ -1,19 +1,11 @@
-import React, { Component } from 'react'
+import React from 'react'
+import HogCard from './HogCard'
 
-class HogList extends Component {
-  makeHogCards(hogsArr) {
-    return hogsArr.map(hog => {
-
-    })
-  }
-
-  render() {
-    return (
-      <div>
-
-      </div>
-    )
-  }
+function HogList ({hogs}) {
+  const hogComponents = hogs.map((hog) => {
+    return <HogCard {...hog} />
+  })
+  return(<div>{hogComponents}</div>)
 }
 
 export default HogList
